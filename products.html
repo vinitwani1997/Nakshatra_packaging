@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | PrimeBox Solutions - Corrugated Packaging Experts</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/package-delivered.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="products.html" class="active">Products</a>
+          <a href="marketing.html">Sustainability</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-ctas">
+          <a href="tel:+1234567890" class="phone-button">
+            <i class="fas fa-phone"></i>
+            <span>Call Us</span>
+          </a>
+          <a href="contact.html#quote" class="quote-button">Request Custom Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="products-hero">
+    <div class="container">
+      <h1>Our Packaging Solutions</h1>
+      <p>High-quality corrugated boxes tailored to your business requirements</p>
+    </div>
+  </section>
+
+  <main class="products-page">
+    <!-- Filter Section -->
+    <section class="product-filters">
+      <div class="container">
+        <div class="filter-container">
+          <div class="filter-group">
+            <label for="product-type">Filter by Type:</label>
+            <select id="product-type">
+              <option value="all">All Products</option>
+              <option value="single-wall">Single Wall</option>
+              <option value="double-wall">Double Wall</option>
+              <option value="printed">Printed Boxes</option>
+              <option value="honeycomb">Honeycomb</option>
+              <option value="paper-bag">Paper Bags</option>
+              <option value="custom">Custom Solutions</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="industry">Industry:</label>
+            <select id="industry">
+              <option value="all">All Industries</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="food">Food & Beverage</option>
+              <option value="electronics">Electronics</option>
+              <option value="industrial">Industrial</option>
+            </select>
+          </div>
+          <button id="reset-filters" class="filter-button">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Cards -->
+    <section class="products-listing">
+      <div class="container">
+        <div class="products-grid">
+          <!-- Single Wall -->
+          <div class="product-card" data-type="single-wall" data-industry="ecommerce">
+            <div class="product-badge">Bestseller</div>
+            <img src="images/single-wall-box1.png" alt="Single Wall Corrugated Box" class="product-image">
+            <div class="product-details">
+              <h3>Single Wall Boxes</h3>
+              <div class="product-specs">
+                <p><i class="fas fa-ruler-combined"></i> <strong>Available Sizes:</strong> 12"x12" to 48"x48"</p>
+                <p><i class="fas fa-layer-group"></i> <strong>Flute Types:</strong> B, C, E</p>
+                <p><i class="fas fa-weight-hanging"></i> <strong>Max. Load:</strong> 20-30 kg</p>
+              </div>
+              <p class="product-desc">Lightweight yet durable boxes perfect for e-commerce shipments and lightweight products.</p>
+              <div class="product-cta">
+                <a href="contact.html#quote" class="cta-button small">Get Quote</a>
+                <a href="#single-wall-details" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Double Wall -->
+          <div class="product-card" data-type="double-wall" data-industry="electronics industrial">
+            <div class="product-badge premium">Premium</div>
+            <img src="images/double-wall-box.png" alt="Double Wall Corrugated Box" class="product-image">
+            <div class="product-details">
+              <h3>Double Wall Boxes</h3>
+              <div class="product-specs">
+                <p><i class="fas fa-ruler-combined"></i> <strong>Available Sizes:</strong> 18"x18" to 60"x60"</p>
+                <p><i class="fas fa-layer-group"></i> <strong>Flute Types:</strong> BC, EB</p>
+                <p><i class="fas fa-weight-hanging"></i> <strong>Max. Load:</strong> 50-80 kg</p>
+              </div>
+              <p class="product-desc">Extra protection for heavy or fragile items with superior stacking strength.</p>
+              <div class="product-cta">
+                <a href="contact.html#quote" class="cta-button small">Get Quote</a>
+                <a href="#double-wall-details" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Printed Box -->
+          <div class="product-card" data-type="printed" data-industry="ecommerce food">
+            <img src="images/printed-box.png" alt="Custom Printed Corrugated Box" class="product-image">
+            <div class="product-details">
+              <h3>Printed Boxes</h3>
+              <div class="product-specs">
+                <p><i class="fas fa-palette"></i> <strong>Print Options:</strong> 1–6 colors</p>
+                <p><i class="fas fa-print"></i> <strong>Technique:</strong> Flexo/Litho</p>
+                <p><i class="fas fa-box"></i> <strong>Finish:</strong> Gloss/Matt</p>
+              </div>
+              <p class="product-desc">Branded packaging that enhances unboxing experience and brand recognition.</p>
+              <div class="product-cta">
+                <a href="contact.html#quote" class="cta-button small">Get Quote</a>
+                <a href="#printed-details" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Solution -->
+          <div class="product-card" data-type="custom" data-industry="all">
+            <div class="product-badge new">New</div>
+            <img src="images/custom-solution.png" alt="Custom Packaging Solution" class="product-image">
+            <div class="product-details">
+              <h3>Custom Solutions</h3>
+              <div class="product-specs">
+                <p><i class="fas fa-lightbulb"></i> <strong>Design:</strong> Tailored to needs</p>
+                <p><i class="fas fa-cog"></i> <strong>Features:</strong> Inserts, Handles, etc.</p>
+                <p><i class="fas fa-tags"></i> <strong>MOQ:</strong> 500 units</p>
+              </div>
+              <p class="product-desc">Fully customized packaging solutions for unique product requirements.</p>
+              <div class="product-cta">
+                <a href="contact.html#quote" class="cta-button small">Get Quote</a>
+                <a href="#custom-details" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Honeycomb Packaging -->
+          <div class="product-card" data-type="honeycomb" data-industry="electronics industrial furniture">
+            <div class="product-badge premium">Innovative</div>
+            <img src="images/honeycomb-packaging.png" alt="Honeycomb Protective Packaging" class="product-image">
+            <div class="product-details">
+              <h3>Honeycomb Packaging</h3>
+              <div class="product-specs">
+                <p><i class="fas fa-shield-alt"></i> <strong>Protection:</strong> Extreme shock absorption</p>
+                <p><i class="fas fa-weight"></i> <strong>Weight Ratio:</strong> 5x stronger than alternatives</p>
+                <p><i class="fas fa-leaf"></i> <strong>Material:</strong> 100% Recyclable paper</p>
+              </div>
+              <p class="product-desc">Ultra-light yet incredibly strong protective packaging for fragile and high-value items.</p>
+              <div class="product-cta">
+                <a href="contact.html#quote" class="cta-button small">Get Quote</a>
+                <a href="#honeycomb-details" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brown Kraft Paper Bag -->
+          <div class="product-card" data-type="paper-bag" data-industry="retail food ecommerce">
+            <div class="product-badge eco">Eco-Friendly</div>
+            <img src="images/kraft-bag.png" alt="Brown Kraft Paper Bags" class="product-image">
+            <div class="product-details">
+              <h3>Kraft Paper Bags</h3>
+              <div class="product-specs">
+                <p><i class="fas fa-shopping-bag"></i> <strong>Types:</strong> Flat/Block bottom</p>
+                <p><i class="fas fa-ruler-combined"></i> <strong>Sizes:</strong> S-XXL (Custom available)</p>
+                <p><i class="fas fa-weight"></i> <strong>Capacity:</strong> Up to 10kg</p>
+              </div>
+              <p class="product-desc">Sustainable and stylish paper bags perfect for retail and food packaging.</p>
+              <div class="product-cta">
+                <a href="contact.html#quote" class="cta-button small">Get Quote</a>
+                <a href="#kraft-bag-details" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results Message -->
+        <p id="no-results" class="no-results" style="display: none; text-align: center; margin-top: 2rem;">
+          No products match your selected filters.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Detail Sections -->
+    <section class="product-details-section">
+      <div class="container">
+        <div id="single-wall-details" class="product-detail">
+          <h2>Single Wall Corrugated Boxes</h2>
+          <div class="detail-content">
+            <img src="images/single-wall-detail.png" alt="Single Wall Box Construction">
+            <div class="detail-text">
+              <div class="spec-table">
+                <h4>Technical Specifications</h4>
+                <table>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Specification</th>
+                  </tr>
+                  <tr>
+                    <td>Material</td>
+                    <td>Kraft paper 150-200 GSM</td>
+                  </tr>
+                  <tr>
+                    <td>Bursting Strength</td>
+                    <td>12-18 kgf/cm²</td>
+                  </tr>
+                  <tr>
+                    <td>Edge Crush Test</td>
+                    <td>18-25 lb/in</td>
+                  </tr>
+                  <tr>
+                    <td>Moisture Resistance</td>
+                    <td>Standard/Waterproof options</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Double Wall Boxes Details -->
+        <div id="double-wall-details" class="product-detail">
+          <h2>Double Wall Corrugated Boxes</h2>
+          <div class="detail-content">
+            <img src="images/double-wall-detail.png" alt="Double Wall Construction">
+            <div class="detail-text">
+              <div class="spec-table">
+                <h4>Technical Specifications</h4>
+                <table>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Specification</th>
+                  </tr>
+                  <tr>
+                    <td>Material</td>
+                    <td>Double-layer kraft paper 200-300 GSM</td>
+                  </tr>
+                  <tr>
+                    <td>Bursting Strength</td>
+                    <td>25-35 kgf/cm²</td>
+                  </tr>
+                  <tr>
+                    <td>Edge Crush Test</td>
+                    <td>32-42 lb/in</td>
+                  </tr>
+                  <tr>
+                    <td>Moisture Resistance</td>
+                    <td>Water-resistant options available</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="applications">
+                <h4>Common Applications</h4>
+                <div class="app-grid">
+                  <div class="app-item">
+                    <i class="fas fa-tv"></i>
+                    <p>Electronics</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-wine-bottle"></i>
+                    <p>Beverages</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-tools"></i>
+                    <p>Machinery Parts</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-boxes"></i>
+                    <p>Warehouse Storage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Printed Boxes Details -->
+        <div id="printed-details" class="product-detail">
+          <h2>Printed Corrugated Boxes</h2>
+          <div class="detail-content">
+            <img src="images/printed-detail.png" alt="Printed Box Examples">
+            <div class="detail-text">
+              <!-- <h3>Features & Benefits</h3>
+              <ul>
+                <li>High-quality brand representation</li>
+                <li>No additional labeling needed</li>
+                <li>Enhanced unboxing experience</li>
+                <li>CMYK or Pantone color matching</li>
+                <li>Spot UV and embossing options</li>
+                <li>Food-grade inks available</li>
+              </ul> -->
+              <div class="spec-table">
+                <h4>Technical Specifications</h4>
+                <table>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Specification</th>
+                  </tr>
+                  <tr>
+                    <td>Print Methods</td>
+                    <td>Flexographic, Lithographic, Digital</td>
+                  </tr>
+                  <tr>
+                    <td>Color Options</td>
+                    <td>1-6 color process printing</td>
+                  </tr>
+                  <tr>
+                    <td>Finish Options</td>
+                    <td>Gloss, Matte, Spot UV</td>
+                  </tr>
+                  <tr>
+                    <td>MOQ</td>
+                    <td>500 units (lower quantities available)</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="applications">
+                <h4>Common Applications</h4>
+                <div class="app-grid">
+                  <div class="app-item">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Retail Packaging</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-gift"></i>
+                    <p>Gift Boxes</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-utensils"></i>
+                    <p>Food Packaging</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <p>Subscription Boxes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Solutions Details -->
+        <div id="custom-details" class="product-detail">
+          <h2>Custom Packaging Solutions</h2>
+          <div class="detail-content">
+            <img src="images/custom-detail.png" alt="Custom Packaging Examples">
+            <div class="detail-text">
+              <!-- <h3>Features & Benefits</h3>
+              <ul>
+                <li>Complete design-to-delivery service</li>
+                <li>Structural engineering support</li>
+                <li>Prototype development available</li>
+                <li>Specialty materials and coatings</li>
+                <li>Integrated product protection</li>
+                <li>Brand-specific packaging systems</li>
+              </ul> -->
+              <div class="spec-table">
+                <h4>Our Capabilities</h4>
+                <table>
+                  <tr>
+                    <th>Service</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>Design</td>
+                    <td>3D modeling and prototyping</td>
+                  </tr>
+                  <tr>
+                    <td>Materials</td>
+                    <td>Specialty corrugated grades</td>
+                  </tr>
+                  <tr>
+                    <td>Features</td>
+                    <td>Handles, windows, inserts</td>
+                  </tr>
+                  <tr>
+                    <td>Finishing</td>
+                    <td>Special coatings and treatments</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="process">
+                <h4>Our Custom Process</h4>
+                <div class="process-steps">
+                  <div class="step">
+                    <div class="step-number">1</div>
+                    <h5>Consultation</h5>
+                    <p>Understand your requirements</p>
+                  </div>
+                  <div class="step">
+                    <div class="step-number">2</div>
+                    <h5>Design</h5>
+                    <p>Create packaging solutions</p>
+                  </div>
+                  <div class="step">
+                    <div class="step-number">3</div>
+                    <h5>Prototype</h5>
+                    <p>Test and refine</p>
+                  </div>
+                  <div class="step">
+                    <div class="step-number">4</div>
+                    <h5>Production</h5>
+                    <p>Manufacture at scale</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="honeycomb-details" class="product-detail">
+          <h2>Honeycomb Protective Packaging</h2>
+          <div class="detail-content">
+            <img src="images/honeycomb-detail.png" alt="Honeycomb Structure">
+            <div class="detail-text">
+              <!-- <h3>Features & Benefits</h3>
+              <ul>
+                <li>Hexagonal cell structure provides superior impact resistance</li>
+                <li>Weight-to-strength ratio outperforms foam and bubble wrap</li>
+                <li>100% paper-based and fully recyclable</li>
+                <li>Custom die-cut shapes available for perfect product fit</li>
+                <li>Ideal for electronics, glass, and fragile components</li>
+                <li>Reduces shipping costs through lightweight design</li>
+              </ul> -->
+              <div class="spec-table">
+                <h4>Technical Specifications</h4>
+                <table>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Specification</th>
+                  </tr>
+                  <tr>
+                    <td>Material Thickness</td>
+                    <td>10mm to 50mm</td>
+                  </tr>
+                  <tr>
+                    <td>Compressive Strength</td>
+                    <td>Up to 50 psi</td>
+                  </tr>
+                  <tr>
+                    <td>Temperature Range</td>
+                    <td>-20°C to 80°C</td>
+                  </tr>
+                  <tr>
+                    <td>Customization</td>
+                    <td>Die-cut, laminated, printed options</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="applications">
+                <h4>Common Applications</h4>
+                <div class="app-grid">
+                  <div class="app-item">
+                    <i class="fas fa-laptop"></i>
+                    <p>Electronics</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-wine-glass"></i>
+                    <p>Glassware</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>Artwork</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-cog"></i>
+                    <p>Industrial Parts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kraft Paper Bag Details -->
+        <div id="kraft-bag-details" class="product-detail">
+          <h2>Brown Kraft Paper Bags</h2>
+          <div class="detail-content">
+            <img src="images/kraft-bag-detail.png" alt="Kraft Paper Bag Varieties">
+            <div class="detail-text">
+              <!-- <h3>Features & Benefits</h3>
+              <ul>
+                <li>100% biodegradable and compostable</li>
+                <li>Made from recycled kraft paper (80-120 GSM)</li>
+                <li>Natural brown or custom colored options</li>
+                <li>Reinforced handles for heavy items</li>
+                <li>Food-safe and FDA approved</li>
+                <li>Perfect alternative to plastic bags</li>
+              </ul> -->
+              <div class="spec-table">
+                <h4>Technical Specifications</h4>
+                <table>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Specification</th>
+                  </tr>
+                  <tr>
+                    <td>Material</td>
+                    <td>Recycled kraft paper (80-120 GSM)</td>
+                  </tr>
+                  <tr>
+                    <td>Handle Types</td>
+                    <td>Twisted, Flat, Rope, Die-cut</td>
+                  </tr>
+                  <tr>
+                    <td>Printing</td>
+                    <td>Offset, Flexo, Silk Screen (1-4 colors)</td>
+                  </tr>
+                  <tr>
+                    <td>MOQ</td>
+                    <td>500 pieces (lower quantities available)</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="applications">
+                <h4>Common Applications</h4>
+                <div class="app-grid">
+                  <div class="app-item">
+                    <i class="fas fa-store"></i>
+                    <p>Retail Shopping</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-bread-slice"></i>
+                    <p>Bakery Goods</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-gift"></i>
+                    <p>Gift Packaging</p>
+                  </div>
+                  <div class="app-item">
+                    <i class="fas fa-seedling"></i>
+                    <p>Organic Products</p>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-options">
+                <h4>Customization Options</h4>
+                <div class="options-grid">
+                  <div class="option">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>Custom Printing</p>
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-stamp"></i>
+                    <p>Embossing/Debossing</p>
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-tag"></i>
+                    <p>Hang Tags</p>
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-eye"></i>
+                    <p>Window Cutouts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CTA -->
+  <section class="products-cta">
+    <div class="container">
+      <h2>Ready to Order or Need Custom Solutions?</h2>
+      <p>Our packaging experts are ready to assist you with the perfect boxes for your products.</p>
+      <div class="cta-buttons">
+        <a href="contact.html#quote" class="cta-button">Request Quote</a>
+        <a href="tel:+1234567890" class="cta-button secondary">Call Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 PrimeBox Solutions. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p class="developer-credit"><small>Developed and Maintained by Visharad Tikale</small></p>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <a href="contact.html#quote" class="floating-cta" aria-label="Request Quote">
+    <i class="fas fa-box-open"></i>
+    <span>Get Quote</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const typeFilter = document.getElementById('product-type');
+      const industryFilter = document.getElementById('industry');
+      const resetBtn = document.getElementById('reset-filters');
+      const productCards = document.querySelectorAll('.product-card');
+      const noResults = document.getElementById('no-results');
+
+      function filterProducts() {
+        const typeValue = typeFilter.value;
+        const industryValue = industryFilter.value;
+        let visibleCount = 0;
+
+        productCards.forEach(card => {
+          const cardType = card.getAttribute('data-type');
+          const cardIndustry = card.getAttribute('data-industry');
+
+          const typeMatch = typeValue === 'all' || cardType === typeValue;
+          const industryMatch = industryValue === 'all' || cardIndustry.includes(industryValue);
+
+          if (typeMatch && industryMatch) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      typeFilter.addEventListener('change', filterProducts);
+      industryFilter.addEventListener('change', filterProducts);
+      resetBtn.addEventListener('click', function () {
+        typeFilter.value = 'all';
+        industryFilter.value = 'all';
+        filterProducts();
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      hamburger.innerHTML = navLinks.classList.contains("show")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+
+    // Back to Top
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTop.classList.toggle("show", window.scrollY > 300);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | PrimeBox Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/package-delivered.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation (Consistent with other pages) -->
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="marketing.html">Sustainability</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-ctas">
+          <a href="tel:+1234567890" class="phone-button">
+            <i class="fas fa-phone"></i>
+            <span>Call Us</span>
+          </a>
+          <a href="contact.html#quote" class="quote-button">Request Custom Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Thank You Content -->
+  <main class="thank-you-page">
+    <section class="thank-you-hero">
+      <div class="container">
+        <div class="thank-you-content">
+          <i class="fas fa-check-circle"></i>
+          <h1>Thank You for Your Submission!</h1>
+          <p>We've received your quote request and will contact you within <strong>1 business day</strong>.</p>
+          
+          <div class="next-steps">
+            <h2>What Happens Next?</h2>
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Review</h3>
+                <p>Our packaging experts will review your requirements</p>
+              </div>
+              <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Design</h3>
+                <p>We'll create a custom solution for your needs</p>
+              </div>
+              <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Quote</h3>
+                <p>You'll receive a detailed proposal with pricing</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-options">
+            <p>Need immediate assistance?</p>
+            <div class="option-buttons">
+              <a href="tel:+1234567890" class="cta-button">
+                <i class="fas fa-phone"></i> Call Now
+              </a>
+              <a href="mailto:support@primeboxsolutions.com" class="cta-button secondary">
+                <i class="fas fa-envelope"></i> Email Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Consistent with other pages) -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 PrimeBox Solutions. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p class="developer-credit"><small>Developed and Maintained by Visharad Tikale</small></p>
+    </div>
+  </footer>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+  
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      hamburger.innerHTML = navLinks.classList.contains("show")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+</body>
+</html>

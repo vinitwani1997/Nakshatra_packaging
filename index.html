@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium corrugated packaging solutions - eco-friendly, durable, and custom-designed boxes">
+  <title>PrimeBox Solutions | Corrugated Packaging Experts</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/package-delivered.png" type="image/x-icon">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="marketing.html">Sustainability</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-ctas">
+          <a href="tel:+919021022304" class="phone-button">
+            <i class="fas fa-phone"></i>
+            <span>Call Us</span>
+          </a>
+          <a href="contact.html#quote" class="quote-button">Request Custom Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" aria-label="Premium packaging solutions">
+      <div class="container hero-content">
+        <h1>Premium Corrugated Packaging Solutions</h1>
+        <p>Eco-friendly, durable, and custom-designed boxes for your business needs.</p>
+        <a href="products.html" class="cta-button">Explore Our Products</a>
+      </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+      <div class="container">
+        <h2 class="section-title">Why Choose PrimeBox?</h2>
+        <div class="value-grid">
+          <div class="value-card">
+            <i class="fas fa-leaf value-icon" aria-hidden="true"></i>
+            <h3>Eco-Friendly Materials</h3>
+            <p>100% recyclable boxes made from sustainable sources.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-cogs value-icon" aria-hidden="true"></i>
+            <h3>Custom Designs</h3>
+            <p>Tailored sizes, prints, and structures for your brand.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-truck value-icon" aria-hidden="true"></i>
+            <h3>Fast Turnaround</h3>
+            <p>Bulk orders delivered within 7 business days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="product-showcase">
+      <div class="container">
+        <h2 class="section-title">Our Corrugated Box Range</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <i class="fas fa-box-open product-icon" aria-hidden="true"></i>
+            <h3>Single Wall Boxes</h3>
+            <p>Lightweight yet sturdy for everyday shipping needs.</p>
+          </div>
+          <div class="product-card">
+            <i class="fas fa-box product-icon" aria-hidden="true"></i>
+            <h3>Double Wall Boxes</h3>
+            <p>Extra protection for heavy or fragile items.</p>
+          </div>
+          <div class="product-card">
+            <i class="fas fa-print product-icon" aria-hidden="true"></i>
+            <h3>Printed Boxes</h3>
+            <p>Branded packaging with high-quality prints.</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="products.html" class="cta-button secondary">View Full Catalog</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Stats -->
+    <section class="stats" id="stats-section">
+      <div class="container">
+        <h2 class="section-title visible-title">Why Choose Corrugated?</h2>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <span class="stat-number">95%</span>
+            <p>Recyclability Rate</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3x</span>
+            <p>More Cost-Effective Than Plastic</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">70%</span>
+            <p>Of Products Ship in Corrugated Boxes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 PrimeBox Solutions. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p class="developer-credit"><small>Developed and Maintained by Visharad Tikale</small></p>
+    </div>
+  </footer>
+
+  <!-- Floating CTA (Mobile) -->
+  <a href="contact.html#quote" class="floating-cta" aria-label="Request Quote">
+    <i class="fas fa-box-open"></i>
+    <span>Get Quote</span>
+  </a>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+  
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      hamburger.innerHTML = navLinks.classList.contains("show")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>  
+</body>
+</html>

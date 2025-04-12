@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factory 360° Immersive Tour</title>
+  <!-- Correct Photo Sphere Viewer CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4.4.1/dist/photo-sphere-viewer.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+    
+    #viewer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    
+    .scene-label {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      z-index: 100;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navigation-arrows {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 100;
+    }
+    
+    .nav-arrow {
+      background: rgba(255, 255, 255, 0.8);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      border: none;
+    }
+    
+    .nav-arrow:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+    
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      z-index: 1000;
+      flex-direction: column;
+    }
+    
+    .loading-spinner {
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top: 5px solid white;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="viewer"></div>
+  <div class="scene-label" id="scene-label">Loading Factory Tour...</div>
+  <div class="navigation-arrows">
+    <button class="nav-arrow" id="prev-btn">←</button>
+    <button class="nav-arrow" id="next-btn">→</button>
+  </div>
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="loading-spinner"></div>
+    <div>Loading immersive experience...</div>
+  </div>
+
+  <!-- Correct dependencies for Photo Sphere Viewer 4 -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uevent@2.0.0/uevent.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4.4.1/dist/photo-sphere-viewer.min.js"></script>
+  
+  <script>
+    // Factory scenes configuration
+    const scenes = [
+      {
+        id: 'entrance',
+        panorama: 'images/Entrance_Area_360.jpg',
+        label: 'Factory Entrance',
+        defaultPosition: { longitude: Math.PI/2, latitude: 0 }
+      },
+      {
+        id: 'production',
+        panorama: 'images/Production_Line_360.jpg',
+        label: 'Production Line',
+        defaultPosition: { longitude: 0, latitude: 0 }
+      },
+      {
+        id: 'packaging',
+        panorama: 'images/Packaging_Area_360.jpg',
+        label: 'Packaging Area',
+        defaultPosition: { longitude: -Math.PI/2, latitude: 0 }
+      },
+      {
+        id: 'qc',
+        panorama: 'images/Quality_Control_360.jpg',
+        label: 'Quality Control',
+        defaultPosition: { longitude: Math.PI, latitude: 0 }
+      }
+    ];
+
+    let currentSceneIndex = 0;
+    let viewer;
+
+    // Initialize the 360° viewer
+    function initViewer() {
+      const loadingOverlay = document.getElementById('loading-overlay');
+      
+      viewer = new PhotoSphereViewer({
+        container: document.querySelector('#viewer'),
+        panorama: scenes[currentSceneIndex].panorama,
+        caption: scenes[currentSceneIndex].label,
+        defaultPosition: scenes[currentSceneIndex].defaultPosition,
+        loadingImg: 'https://photo-sphere-viewer.js.org/assets/photosphere-logo.gif',
+        navbar: [
+          'zoom',
+          'move',
+          'download',
+          'fullscreen'
+        ],
+        plugins: [
+          [PhotoSphereViewer.SettingsPlugin, {
+            lang: {
+              zoom: 'Zoom Level',
+              moveSpeed: 'Move Speed',
+              littlePlanet: 'Little Planet'
+            }
+          }]
+        ],
+        lang: {
+          zoom: 'Zoom',
+          autorotate: 'Auto-rotation',
+          zoomOut: 'Zoom out',
+          zoomIn: 'Zoom in',
+          download: 'Download',
+          fullscreen: 'Fullscreen'
+        }
+      });
+
+      // Update UI when panorama is loaded
+      viewer.on('ready', () => {
+        loadingOverlay.style.display = 'none';
+        document.getElementById('scene-label').textContent = scenes[currentSceneIndex].label;
+      });
+    }
+
+    // Change to a specific scene
+    function changeScene(index) {
+      const loadingOverlay = document.getElementById('loading-overlay');
+      loadingOverlay.style.display = 'flex';
+      
+      currentSceneIndex = index;
+      document.getElementById('scene-label').textContent = scenes[currentSceneIndex].label;
+      
+      viewer.setPanorama(scenes[currentSceneIndex].panorama, {
+        position: scenes[currentSceneIndex].defaultPosition,
+        transition: 1500,
+        speed: '2rpm'
+      }).then(() => {
+        loadingOverlay.style.display = 'none';
+      });
+    }
+
+    // Navigate between scenes
+    function navigate(direction) {
+      let newIndex = currentSceneIndex + direction;
+      
+      // Circular navigation
+      if (newIndex < 0) newIndex = scenes.length - 1;
+      if (newIndex >= scenes.length) newIndex = 0;
+      
+      changeScene(newIndex);
+    }
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      initViewer();
+      
+      // Button event listeners
+      document.getElementById('prev-btn').addEventListener('click', () => navigate(-1));
+      document.getElementById('next-btn').addEventListener('click', () => navigate(1));
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') navigate(-1);
+        if (e.key === 'ArrowRight') navigate(1);
+      });
+    });
+  </script>
+</body>
+</html>

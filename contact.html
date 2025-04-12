@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact PrimeBox Solutions | Corrugated Packaging Experts</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/package-delivered.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="marketing.html">Sustainability</a>
+          <a href="contact.html" class="active">Contact</a>
+        </div>
+        <div class="nav-ctas">
+          <a href="tel:+1234567890" class="phone-button">
+            <i class="fas fa-phone"></i>
+            <span>Call Us</span>
+          </a>
+          <a href="contact.html#quote" class="quote-button">Request Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Let's Create Your Perfect Packaging</h1>
+        <p>Our packaging experts are ready to discuss your requirements</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="contact-page">
+    <!-- Contact Options Tabs -->
+    <section class="contact-options">
+      <div class="container">
+        <div class="option-tabs">
+          <button class="tab-button active" data-tab="quote">Get a Quote</button>
+          <button class="tab-button" data-tab="support">Technical Support</button>
+          <button class="tab-button" data-tab="general">General Inquiry</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="quote" class="form-section active-tab">
+      <div class="container">
+        <div class="form-container">
+          <div class="form-intro">
+            <h2>Request a Custom Quote</h2>
+            <p>Complete this form and we'll respond within 24 hours with pricing and solutions</p>
+          </div>
+          <form class="quote-form" id="quoteForm" netlify>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company">
+              </div>
+              <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              <div class="form-group full-width">
+                <label for="product">Product Interest*</label>
+                <select id="product" name="product" required>
+                  <option value="">Select Product Type</option>
+                  <option value="single-wall">Single Wall Boxes</option>
+                  <option value="double-wall">Double Wall Boxes</option>
+                  <option value="printed">Printed Boxes</option>
+                  <option value="custom">Custom Solution</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="quantity">Estimated Monthly Quantity</label>
+                <div class="quantity-range">
+                  <input type="range" id="quantity-range" min="100" max="10000" step="100" value="1000">
+                  <span id="quantity-value">1000 units</span>
+                  <input type="hidden" id="quantity" name="quantity">
+                </div>
+              </div>
+              <div class="form-group full-width">
+                <label for="message">Project Details*</label>
+                <textarea id="message" name="message" rows="5" placeholder="Dimensions, printing requirements, special features..." required></textarea>
+              </div>
+              <div class="form-group full-width">
+                <label for="file-upload">Upload Design Files (Optional)</label>
+                <div class="file-upload-wrapper">
+                  <input type="file" id="file-upload" name="files" multiple 
+                        accept=".pdf,.jpg,.jpeg,.png,.ai,.eps,.cdr">
+                  <label for="file-upload" class="file-upload-label">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Choose files or drag and drop</span>
+                    <small>Max. file size: 10MB (PDF, JPG, PNG, AI, EPS, CDR)</small>
+                  </label>
+                  <div class="file-upload-preview"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="cta-button">
+                <i class="fas fa-paper-plane"></i> Submit Quote Request
+              </button>
+              <p class="form-note">We'll never share your information with third parties</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Support Section -->
+    <section id="support" class="form-section">
+      <div class="container">
+        <div class="form-container">
+          <div class="form-intro">
+            <h2>Technical Support</h2>
+            <p>Our technical team is ready to assist with any product questions or issues</p>
+          </div>
+          <form class="quote-form" netlify>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="support-name">Full Name*</label>
+                <input type="text" id="support-name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="support-email">Email*</label>
+                <input type="email" id="support-email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="support-phone">Phone Number</label>
+                <input type="tel" id="support-phone" name="phone">
+              </div>
+              <div class="form-group full-width">
+                <label for="support-subject">Subject*</label>
+                <input type="text" id="support-subject" name="subject" required>
+              </div>
+              <div class="form-group full-width">
+                <label for="support-message">How can we help?*</label>
+                <textarea id="support-message" name="message" rows="5" required></textarea>
+              </div>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="cta-button">
+                <i class="fas fa-headset"></i> Request Support
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- General Inquiry Section ("Let's Talk!") -->
+    <section id="general" class="form-section">
+      <div class="lets-talk-section">
+        <div class="container">
+          <div class="lets-talk-grid">
+            <!-- Left Column - Illustration & Text -->
+            <div class="lets-talk-content">
+              <h2 class="section-title">Let's Talk!</h2>
+              <div class="illustration-wrapper">
+                <img src="images/contact-illustration.png" alt="Team discussion illustration" class="contact-illustration">
+              </div>
+              <div class="talk-content">
+                <p>Have questions about our packaging solutions? Our team is ready to help you find the perfect packaging for your needs.</p>
+              </div>
+            </div>
+
+            <!-- Right Column - Form -->
+            <div class="lets-talk-form">
+              <form class="talk-form" netlify>
+                <div class="form-group">
+                  <label for="talk-name">Full Name</label>
+                  <input type="text" id="talk-name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="talk-email">Email</label>
+                  <input type="email" id="talk-email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="talk-message">Message</label>
+                  <textarea id="talk-message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button full-width">
+                  SEND MESSAGE <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+      <div class="container">
+        <div class="contact-info-grid">
+          <div class="contact-methods">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Our Location</h3>
+                <address>
+                  123 Packaging Avenue<br>
+                  Industrial Zone, Mumbai 400001<br>
+                  Maharashtra, India
+                </address>
+                <a href="#map" class="map-link">View on map <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Phone Support</h3>
+                <p>
+                  <a href="tel:+912212345678">+91 22 1234 5678</a><br>
+                  <a href="tel:+919876543210">+91 98765 43210</a>
+                </p>
+                <p class="hours">Mon-Fri: 9AM-6PM | Sat: 10AM-2PM</p>
+              </div>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email Us</h3>
+                <p>
+                  <a href="mailto:sales@primeboxsolutions.com">sales@primeboxsolutions.com</a><br>
+                  <a href="mailto:support@primeboxsolutions.com">support@primeboxsolutions.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-map" id="map">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715370381107!2d72.8542143153775!3d19.043557258227835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8df6a116603%3A0x3a7d5c1c2e4d4b1d!2sPackaging%20Avenue!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question">
+              What information do I need for a quote?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>For an accurate quote, please provide: product dimensions, quantity needed, material specifications, printing requirements, and any special features like handles or windows.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is your typical turnaround time?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Standard orders ship within 7-10 business days. Rush services are available for 3-5 day turnaround (additional charges apply). Custom designs may require 2-3 weeks.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you offer samples?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We provide sample kits of our standard boxes. Custom samples are available for approved projects (sample fees may apply but are credited toward first order).</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What are your payment terms?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>New clients typically pay 50% deposit with order and 50% before shipment. Established clients may qualify for net-30 terms after credit approval.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CTA Section -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Still Have Questions?</h2>
+        <p>Our packaging consultants are available to help you choose the right solution</p>
+        <div class="cta-buttons">
+          <a href="tel:+912212345678" class="cta-button">
+            <i class="fas fa-phone"></i> Call Now
+          </a>
+          <a href="mailto:sales@primeboxsolutions.com" class="cta-button secondary">
+            <i class="fas fa-envelope"></i> Email Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 PrimeBox Solutions. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p class="developer-credit"><small>Developed and Maintained by Visharad Tikale</small></p>
+    </div>
+  </footer>
+
+  <!-- Floating CTA (Mobile) -->
+  <a href="tel:+912212345678" class="floating-cta" aria-label="Call Us">
+    <i class="fas fa-phone"></i>
+    <span>Call Now</span>
+  </a>
+
+  <script>
+    // File Upload Preview
+    const fileUpload = document.getElementById('file-upload');
+    const filePreview = document.querySelector('.file-upload-preview');
+  
+    fileUpload.addEventListener('change', function() {
+      filePreview.innerHTML = '';
+      if (this.files.length > 0) {
+        Array.from(this.files).forEach(file => {
+          const previewItem = document.createElement('div');
+          previewItem.className = 'file-preview-item';
+          previewItem.innerHTML = `
+            <span>${file.name}</span>
+            <small>${formatFileSize(file.size)}</small>
+            <button onclick="removeFilePreview(this)" aria-label="Remove file">
+              <i class="fas fa-times"></i>
+            </button>
+          `;
+          filePreview.appendChild(previewItem);
+        });
+      }
+    });
+  
+    function formatFileSize(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+    }
+  
+    function removeFilePreview(element) {
+      const items = Array.from(fileUpload.files);
+      const fileName = element.parentNode.querySelector('span').textContent;
+      const updatedItems = items.filter(file => file.name !== fileName);
+      
+      const dataTransfer = new DataTransfer();
+      updatedItems.forEach(file => dataTransfer.items.add(file));
+      fileUpload.files = dataTransfer.files;
+      
+      element.parentNode.remove();
+    }
+
+    // Quantity Range Slider
+    const quantityRange = document.getElementById('quantity-range');
+    const quantityValue = document.getElementById('quantity-value');
+    const quantityInput = document.getElementById('quantity');
+    
+    quantityRange.addEventListener('input', function() {
+      const value = this.value;
+      quantityValue.textContent = value + (value == 10000 ? '+ units' : ' units');
+      quantityInput.value = value;
+    });
+
+    // Tab Switching
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabSections = document.querySelectorAll('.form-section');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        
+        // Update active tab button
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Show corresponding section
+        tabSections.forEach(section => {
+          section.classList.remove('active-tab');
+          if (section.id === tabId) {
+            section.classList.add('active-tab');
+          }
+        });
+      });
+    });
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        const icon = this.querySelector('i');
+        
+        // Toggle this item
+        this.classList.toggle('active');
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+        
+        // Close other items
+        faqQuestions.forEach(q => {
+          if (q !== this) {
+            q.classList.remove('active');
+            q.nextElementSibling.style.display = 'none';
+            q.querySelector('i').classList.remove('fa-chevron-up');
+            q.querySelector('i').classList.add('fa-chevron-down');
+          }
+        });
+      });
+    });
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+  
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      hamburger.innerHTML = navLinks.classList.contains("show")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+</body>
+</html>
